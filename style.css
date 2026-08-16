@@ -4,10 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-    background: #0b0e1a;
-    color: #eef2ff;
+    background: #070b17; /* dark azulado profundo */
+    color: #e6edff;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -34,8 +35,8 @@ body {
     justify-content: center;
     padding: 2rem 1.5rem;
     text-align: center;
-    backdrop-filter: blur(2px);
-    background: radial-gradient(circle at 30% 30%, rgba(10, 20, 50, 0.4), rgba(0, 0, 0, 0.7));
+    backdrop-filter: blur(3px);
+    background: radial-gradient(circle at 30% 30%, rgba(10, 20, 60, 0.5), rgba(0, 0, 10, 0.8));
 }
 
 .hero {
@@ -54,15 +55,15 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    padding: 6px;
-    background: linear-gradient(135deg, #f6d365, #fda085);
-    box-shadow: 0 0 30px rgba(253, 160, 133, 0.4), 0 0 60px rgba(253, 160, 133, 0.2);
+    padding: 5px;
+    background: linear-gradient(135deg, #3a6ea5, #1e3a6b);
+    box-shadow: 0 0 30px rgba(58, 110, 165, 0.5), 0 0 60px rgba(30, 58, 107, 0.3);
     transition: transform 0.4s ease, box-shadow 0.4s;
 }
 
 .foto-moldura:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 50px rgba(253, 160, 133, 0.6), 0 0 80px rgba(253, 160, 133, 0.3);
+    box-shadow: 0 0 50px rgba(58, 110, 165, 0.7), 0 0 80px rgba(30, 58, 107, 0.5);
 }
 
 .foto-moldura img {
@@ -71,20 +72,20 @@ body {
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    border: 2px solid #0b0e1a;
+    border: 2px solid #0b111f;
 }
 
-/* ===== Títulos ===== */
+/* ===== Títulos com gradiente azul/dourado ===== */
 .hero h1 {
     font-size: clamp(2.8rem, 10vw, 5.5rem);
     font-weight: 800;
     letter-spacing: 2px;
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 50%, #f6d365 100%);
+    background: linear-gradient(135deg, #8bb8f0 0%, #f6d365 50%, #8bb8f0 100%);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradienteBrilho 6s ease infinite alternate;
-    text-shadow: 0 0 40px rgba(253, 160, 133, 0.3);
+    text-shadow: 0 0 40px rgba(139, 184, 240, 0.3);
     margin-bottom: 0.5rem;
 }
 .hero h1 i {
@@ -96,46 +97,52 @@ body {
 .hero h2 {
     font-size: clamp(1.4rem, 4vw, 2.4rem);
     font-weight: 300;
-    color: #cfd8f0;
+    color: #aac3f0;
     letter-spacing: 4px;
-    text-shadow: 0 0 20px rgba(100, 150, 255, 0.3);
+    text-shadow: 0 0 20px rgba(70, 130, 200, 0.3);
 }
 
 .hero .nome {
     font-size: clamp(1.8rem, 5vw, 3.2rem);
     font-weight: 700;
-    color: #ffd966;
-    text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+    color: #f6d365;
+    text-shadow: 0 0 30px rgba(246, 211, 101, 0.3);
     margin-top: 0.5rem;
 }
 
 .hero .sub {
     font-size: 1.2rem;
-    color: #aab8e6;
+    color: #9db9f0;
     margin-top: 1rem;
-    border-top: 2px solid rgba(255, 215, 0, 0.3);
+    border-top: 2px solid rgba(246, 211, 101, 0.3);
     padding-top: 1rem;
     display: inline-block;
 }
 
+/* ===== Botão com gradiente azul ===== */
 .btn {
     display: inline-block;
     margin-top: 2rem;
     padding: 0.8rem 2.5rem;
     border-radius: 50px;
-    background: linear-gradient(145deg, #f6d365, #fda085);
-    color: #0b0e1a;
+    background: linear-gradient(145deg, #2a5f8a, #1a3f6a);
+    color: #f0f7ff;
     font-weight: 700;
     font-size: 1.2rem;
     text-decoration: none;
-    box-shadow: 0 10px 30px rgba(253, 160, 133, 0.3);
+    box-shadow: 0 10px 30px rgba(26, 63, 106, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
     border: none;
     cursor: pointer;
 }
+.btn i {
+    margin-right: 0.5rem;
+    color: #f6d365;
+}
 .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(253, 160, 133, 0.5);
+    box-shadow: 0 15px 40px rgba(26, 63, 106, 0.7);
+    background: linear-gradient(145deg, #3a7aaa, #2a5f8a);
 }
 
 /* ===== Portfólio ===== */
@@ -150,19 +157,19 @@ body {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(20, 35, 70, 0.4);
     backdrop-filter: blur(8px);
     border-radius: 24px;
     padding: 2rem 1.5rem;
-    border: 1px solid rgba(255, 215, 0, 0.15);
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
-    transition: transform 0.4s ease, box-shadow 0.4s;
+    border: 1px solid rgba(58, 110, 165, 0.25);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 20, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s, border-color 0.3s;
     text-align: left;
 }
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 60px -10px rgba(253, 160, 133, 0.2);
-    border-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 30px 60px -10px rgba(58, 110, 165, 0.3);
+    border-color: rgba(246, 211, 101, 0.5);
 }
 .card h3 {
     font-size: 1.6rem;
@@ -171,7 +178,7 @@ body {
     letter-spacing: 1px;
 }
 .card p {
-    color: #c8d2f0;
+    color: #c0d4f5;
     line-height: 1.6;
     font-size: 1rem;
 }
@@ -179,36 +186,51 @@ body {
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
     display: block;
+    color: #6a9fd8;
+    transition: color 0.3s;
+}
+.card:hover .icone {
     color: #f6d365;
 }
 
+/* ===== Mensagem especial ===== */
 .mensagem {
     margin-top: 4rem;
     padding: 2rem;
-    background: rgba(255, 215, 0, 0.05);
+    background: rgba(20, 35, 70, 0.3);
     border-radius: 30px;
     border-left: 6px solid #f6d365;
     max-width: 800px;
     width: 100%;
     font-style: italic;
     font-size: 1.2rem;
-    color: #dce3ff;
+    color: #d0def5;
+    backdrop-filter: blur(4px);
+}
+.mensagem i {
+    color: #f6d365;
+    margin: 0 0.3rem;
 }
 .mensagem strong {
     color: #f6d365;
 }
 
+/* ===== Rodapé ===== */
 footer {
     margin-top: 4rem;
     padding: 1.5rem;
-    color: #8892b0;
+    color: #6f8fc0;
     font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 215, 0, 0.1);
+    border-top: 1px solid rgba(58, 110, 165, 0.2);
     width: 100%;
     text-align: center;
 }
+footer i {
+    color: #f6d365;
+    margin: 0 0.3rem;
+}
 
-/* ===== Animação ===== */
+/* ===== Animação do gradiente ===== */
 @keyframes gradienteBrilho {
     0% {
         background-position: 0% 50%;
@@ -233,4 +255,4 @@ footer {
         width: 120px;
         height: 120px;
     }
-}
+    }
