@@ -24,8 +24,8 @@
 
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: #0b0d15;
-            color: #e8edf5;
+            background: #080c1a;
+            color: #e2e8f0;
             overflow-x: hidden;
             line-height: 1.6;
         }
@@ -70,13 +70,14 @@
             height: 150px;
             border-radius: 50%;
             padding: 4px;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
-            box-shadow: 0 0 40px rgba(251, 191, 36, 0.25);
-            transition: transform 0.4s ease;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4, #8b5cf6);
+            box-shadow: 0 0 50px rgba(59, 130, 246, 0.3), 0 0 100px rgba(6, 182, 212, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
         .foto-moldura:hover {
             transform: scale(1.05);
+            box-shadow: 0 0 60px rgba(59, 130, 246, 0.5), 0 0 120px rgba(6, 182, 212, 0.2);
         }
 
         .foto-moldura img {
@@ -84,7 +85,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
-            border: 3px solid #0b0d15;
+            border: 3px solid #080c1a;
             display: block;
         }
 
@@ -93,11 +94,11 @@
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -0.02em;
-            background: linear-gradient(to right, #fcd34d, #fbbf24, #f59e0b);
+            background: linear-gradient(to right, #60a5fa, #06b6d4, #a78bfa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
+            text-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
             margin-bottom: 0.25rem;
         }
 
@@ -117,6 +118,7 @@
             color: #f1f5f9;
             margin-top: 0.5rem;
             letter-spacing: 1px;
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
         }
 
         .subtitulo {
@@ -131,15 +133,17 @@
             padding: 0.25rem 1.5rem;
             border-radius: 40px;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(148, 163, 184, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.05);
         }
 
         .linha-decorativa {
             width: 80px;
             height: 3px;
-            background: linear-gradient(90deg, transparent, #fbbf24, transparent);
+            background: linear-gradient(90deg, transparent, #3b82f6, #06b6d4, transparent);
             margin: 1.5rem auto;
             border-radius: 4px;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
         }
 
         .chamada {
@@ -153,31 +157,49 @@
         }
 
         .chamada i {
-            color: #fbbf24;
+            color: #3b82f6;
             font-size: 1.2rem;
+            filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.3));
         }
 
         .btn {
             display: inline-block;
             margin-top: 2rem;
             padding: 0.9rem 2.8rem;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: #0b0d15;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            color: #ffffff;
             font-weight: 700;
             font-size: 1.05rem;
             border-radius: 60px;
             text-decoration: none;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.25);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.3);
             border: none;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn:hover {
             transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(251, 191, 36, 0.4);
-            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.5);
+            background: linear-gradient(135deg, #2563eb, #0891b2);
         }
 
         /* ---------- PORTFOLIO (CARDS) ---------- */
@@ -192,7 +214,7 @@
         .card {
             background: rgba(15, 23, 42, 0.75);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(251, 191, 36, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.15);
             border-radius: 24px;
             padding: 2rem 1.5rem;
             text-align: center;
@@ -206,8 +228,8 @@
 
         .card:hover {
             transform: translateY(-10px) scale(1.02);
-            border-color: #fbbf24;
-            box-shadow: 0 16px 48px rgba(251, 191, 36, 0.15);
+            border-color: #3b82f6;
+            box-shadow: 0 16px 48px rgba(59, 130, 246, 0.15), inset 0 0 30px rgba(59, 130, 246, 0.05);
             background: rgba(20, 30, 55, 0.85);
         }
 
@@ -215,10 +237,11 @@
             display: inline-block;
             font-size: 2.2rem;
             font-weight: 300;
-            color: #fbbf24;
+            color: #3b82f6;
             opacity: 0.6;
             margin-bottom: 0.5rem;
             font-family: 'Times New Roman', serif;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
         }
 
         .card h3 {
@@ -234,6 +257,10 @@
             font-size: 0.95rem;
             line-height: 1.6;
         }
+        .card p strong {
+            color: #60a5fa;
+            font-weight: 600;
+        }
 
         @keyframes fadeUp {
             to {
@@ -247,7 +274,7 @@
             position: relative;
             background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(8px);
-            border-left: 4px solid #fbbf24;
+            border-left: 4px solid #3b82f6;
             border-radius: 20px;
             padding: 2.5rem 3rem;
             margin: 1rem 0 3rem;
@@ -256,14 +283,14 @@
             text-align: center;
             font-size: clamp(1rem, 1.4vw, 1.2rem);
             color: #e2e8f0;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 0 60px rgba(59, 130, 246, 0.03);
         }
 
         .mensagem .aspas {
             font-size: 4rem;
             line-height: 0.6;
-            color: #fbbf24;
-            opacity: 0.3;
+            color: #3b82f6;
+            opacity: 0.2;
             font-family: 'Georgia', serif;
             display: inline-block;
         }
@@ -279,15 +306,16 @@
         }
 
         .mensagem strong {
-            color: #fbbf24;
+            color: #60a5fa;
             font-weight: 600;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
         }
 
         /* ---------- FOOTER ---------- */
         footer {
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            border-top: 1px solid rgba(59, 130, 246, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -304,16 +332,17 @@
         }
 
         .footer-social a {
-            color: #94a3b8;
+            color: #64748b;
             font-size: 1.8rem;
-            transition: color 0.3s ease, transform 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
             display: inline-block;
             line-height: 1;
         }
 
         .footer-social a:hover {
-            color: #fbbf24;
+            color: #3b82f6;
             transform: scale(1.2) translateY(-3px);
+            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3));
         }
 
         .footer-text {
@@ -455,7 +484,7 @@
     </div>
 
     <script>
-        // ---------- THREE.JS : FUNDO DE PARTÍCULAS ----------
+        // ---------- THREE.JS : FUNDO DE PARTÍCULAS (TECH BLUE) ----------
         (function initParticles() {
             const container = document.getElementById('three-canvas');
             const scene = new THREE.Scene();
@@ -471,7 +500,7 @@
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
             container.appendChild(renderer.domElement);
 
-            // Geometria das partículas
+            // Geometria das partículas (azul principal)
             const particlesGeometry = new THREE.BufferGeometry();
             const particlesCount = 1800;
             const posArray = new Float32Array(particlesCount * 3);
@@ -484,7 +513,7 @@
 
             particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
 
-            // Textura circular (desenhada com canvas)
+            // Textura circular
             const canvas = document.createElement('canvas');
             canvas.width = 32;
             canvas.height = 32;
@@ -492,18 +521,18 @@
             ctx.beginPath();
             ctx.arc(16, 16, 14, 0, Math.PI * 2);
             ctx.fillStyle = 'white';
-            ctx.shadowColor = '#fbbf24';
-            ctx.shadowBlur = 10;
+            ctx.shadowColor = '#3b82f6';
+            ctx.shadowBlur = 15;
             ctx.fill();
 
             const particleTexture = new THREE.CanvasTexture(canvas);
 
             const particlesMaterial = new THREE.PointsMaterial({
-                size: 0.25,
+                size: 0.3,
                 map: particleTexture,
-                color: 0xfbbf24,
+                color: 0x3b82f6,
                 transparent: true,
-                opacity: 0.7,
+                opacity: 0.8,
                 blending: THREE.AdditiveBlending,
                 depthWrite: false
             });
@@ -511,7 +540,7 @@
             const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
             scene.add(particlesMesh);
 
-            // Estrelas maiores e mais douradas (segundo sistema)
+            // Estrelas maiores (ciano / tech glow)
             const bigStarsGeo = new THREE.BufferGeometry();
             const bigCount = 300;
             const bigPos = new Float32Array(bigCount * 3);
@@ -522,17 +551,17 @@
             }
             bigStarsGeo.setAttribute('position', new THREE.BufferAttribute(bigPos, 3));
             const bigStarsMat = new THREE.PointsMaterial({
-                size: 0.45,
-                color: 0xfcd34d,
+                size: 0.5,
+                color: 0x06b6d4,
                 transparent: true,
-                opacity: 0.4,
+                opacity: 0.5,
                 blending: THREE.AdditiveBlending,
                 depthWrite: false
             });
             const bigStars = new THREE.Points(bigStarsGeo, bigStarsMat);
             scene.add(bigStars);
 
-            // Mouse tracking para movimento sutil
+            // Mouse tracking
             let mouseX = 0,
                 mouseY = 0;
             document.addEventListener('mousemove', (event) => {
@@ -541,19 +570,16 @@
             });
 
             // Animação
-            let time = 0;
-
             function animate() {
                 requestAnimationFrame(animate);
-                time += 0.0005;
 
-                // Rotação lenta das partículas
+                // Rotação lenta
                 particlesMesh.rotation.x += 0.00015;
                 particlesMesh.rotation.y += 0.00025;
                 bigStars.rotation.x += 0.0001;
                 bigStars.rotation.y += 0.0002;
 
-                // Seguir suavemente o mouse
+                // Seguir o mouse
                 const targetX = mouseX * 0.3;
                 const targetY = mouseY * 0.2;
                 particlesMesh.rotation.x += (targetY - particlesMesh.rotation.x) * 0.01;
@@ -569,10 +595,4 @@
             window.addEventListener('resize', () => {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-            });
-        })();
-    </script>
-
-</body>
-    </html>
+                renderer.setSize(window
