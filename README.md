@@ -157,5 +157,3 @@ Este projeto está licenciado sob a **MIT License**. Consulte o ficheiro [LICENS
 > *"O melhor professor não é o que ensina a programar, mas o que inspira a criar soluções."*  
 > — Prof. Bernardo Kinavuidi Paulo Lukoki
 ```
-
----
